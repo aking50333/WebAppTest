@@ -17,12 +17,12 @@
        <div class="content">
            <div class="formContent">
                <h:form>
-                   <p>Username: <h:inputText id="username" value="#{person.username}" /></p>
-                   <p>Password:&nbsp; <h:inputText id="password" value="#{person.password}" /></p>
+                   <p>Username: <h:inputText id="username" value="#{person.username}" required="true" /> *</p>
+                   <p>Password:&nbsp; <h:inputSecret id="password" value="#{person.password}" /></p>
                    <p>Firstname: <h:inputText id="firstname" value="#{person.firstName}" /></p>
                    <p>Lastname:&nbsp; <h:inputText id="lastname" value="#{person.lastName}" /></p>
 
-                   <h:commandButton id="submit" value="Submit" actionListener="#{person.next}"/>
+                   <h:commandButton id="submit" value="Select All" actionListener="#{person.next}"/>
                    <h:commandButton id="insertInto" value="Insert" actionListener="#{person.insertInto}"/>
                    <h:commandButton id="deleteFrom" value="Delete" actionListener="#{person.deleteFrom}"/>
                </h:form>
