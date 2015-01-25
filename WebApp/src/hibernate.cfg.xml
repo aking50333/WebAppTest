@@ -3,16 +3,12 @@
     "-//Hibernate/Hibernate Configuration DTD//EN"
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-  <session-factory>
-      <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-      <property name="connection.driver_class">org.gjt.mm.mysql.Driver</property>
-      <property name="connection.url">jdbc:mysql://localhost/testdb</property>
-      <property name="connection.username">root</property>
-      <property name="connection.password"></property>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
 
-      <mapping class="com.dal.entity.UserEntity" />
-
-    <!-- DB schema will be updated if needed -->
-    <!-- <property name="hbm2ddl.auto">update</property> -->
-  </session-factory>
+        <mapping class="com.dal.entity.UserEntity"/>
+    </session-factory>
 </hibernate-configuration>

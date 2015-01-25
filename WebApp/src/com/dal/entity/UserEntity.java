@@ -10,9 +10,11 @@ import javax.persistence.*;
 public class UserEntity {
     private int userid;
     private String username;
+    private String password;
+    private String firstname;
+    private String lastname;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "userid")
     public int getUserid() {
         return userid;
@@ -32,6 +34,36 @@ public class UserEntity {
         this.username = username;
     }
 
+    @Basic
+    @Column(name = "password")
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    @Basic
+    @Column(name = "firstname")
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    @Basic
+    @Column(name = "lastname")
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,6 +72,9 @@ public class UserEntity {
         UserEntity that = (UserEntity) o;
 
         if (userid != that.userid) return false;
+        if (firstname != null ? !firstname.equals(that.firstname) : that.firstname != null) return false;
+        if (lastname != null ? !lastname.equals(that.lastname) : that.lastname != null) return false;
+        if (password != null ? !password.equals(that.password) : that.password != null) return false;
         if (username != null ? !username.equals(that.username) : that.username != null) return false;
 
         return true;
@@ -49,6 +84,9 @@ public class UserEntity {
     public int hashCode() {
         int result = userid;
         result = 31 * result + (username != null ? username.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
+        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
         return result;
     }
 }

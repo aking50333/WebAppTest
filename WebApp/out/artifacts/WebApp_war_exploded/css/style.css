@@ -1,0 +1,53 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: darkblue;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 90%;
+    margin: 0px auto;
+    height: 100px;
+    background-color: gray;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.header h1 {
+    font-size: 45px;
+    color: lawngreen;
+    padding: 20px;
+}
+
+.content {
+    width: 90%;
+    margin: -16px auto;
+    background-color: #aaaaaa;
+    padding: 20px 0px;
+}
+
+.formContent {
+    padding: 50px;
+    margin-left: 400px;
+    background-color: #EDD03D;
+    height: 180px;
+    width: 260px;
+    border-radius: 60px;
+}
+
+.footer {
+    width: 90%;
+    margin: 0px auto;
+    height: 100px;
+    background-color: gray;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.footer p {
+    color: white;
+    padding: 20px;
+    font-size: 8px;
+}
