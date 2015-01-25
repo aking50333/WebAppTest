@@ -10,7 +10,8 @@
        <h:form>
            <h:inputText id="username" value="#{person.username}" />
            <h:commandButton id="submit" value="Submit" actionListener="#{person.next}"/>
-           <h:commandButton id="insertInto" value="Insert" actionListener="#{person.insertInto}" action="next"/>
+           <h:commandButton id="insertInto" value="Insert" actionListener="#{person.insertInto}"/>
+           <h:commandButton id="deleteFrom" value="Delete" actionListener="#{person.deleteFrom}"/>
        </h:form>
    </f:view>
 </html>

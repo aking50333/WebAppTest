@@ -23,13 +23,29 @@ public class TransactionManager {
     }
 
     public void insertInto(String username){
-
         Session ses = HibernateUtil.getSessionFactory().openSession();
         ses.beginTransaction();
         UserEntity userEntity = new UserEntity();
         userEntity.setUsername(username);
         ses.save(userEntity);
         ses.getTransaction().commit();
+        ses.close();
+    }
+
+    public void deleteRecord(String name){
+        Session ses = HibernateUtil.getSessionFactory().openSession();
+        ses.beginTransaction();
+
+
+        Query query = ses.createQuery("from UserEntity where username = :name ");
+        query.setParameter("name", name);
+        List<UserEntity> results = query.list();
+        int k = results.size();
+        for(UserEntity us : results){
+            ses.delete(us);
+        }
+        ses.getTransaction().commit();
+        k = results.size();
         ses.close();
     }
 }

@@ -30,9 +30,16 @@ public class person {
         TransactionManager tr = new TransactionManager();
         tr.insertInto(getUsername());
         System.out.println(getUsername());
-
-
     }
+
+
+    public void deleteFrom(ActionEvent event){
+
+        TransactionManager tr = new TransactionManager();
+        tr.deleteRecord(getUsername());
+        System.out.println(getUsername());
+    }
+
 
     public String getUsername() {
         return username;
