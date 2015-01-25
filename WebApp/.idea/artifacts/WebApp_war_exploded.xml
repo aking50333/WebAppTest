@@ -9,8 +9,17 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Hibernate 4.2.2-4.2.2" />
+          <element id="library" level="project" name="lib1" />
+          <element id="library" level="project" name="lib" />
+          <element id="library" level="project" name="Mojarra-1.2" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="WebApp/web/Web2" />
+      <element id="library" level="project" name="Hibernate 4.2.2-4.2.2" />
+      <element id="library" level="project" name="jsf-api" />
+      <element id="library" level="project" name="lib" />
+      <element id="library" level="project" name="lib1" />
+      <element id="library" level="project" name="Mojarra-1.2" />
     </root>
   </artifact>
 </component>

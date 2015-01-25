@@ -30,6 +30,8 @@ public class person {
         TransactionManager tr = new TransactionManager();
         tr.insertInto(getUsername());
         System.out.println(getUsername());
+
+
     }
 
     public String getUsername() {

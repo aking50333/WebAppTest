@@ -4,9 +4,8 @@
     <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="6af87f78-1df9-4016-bf58-066194f2627a">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://host/database</jdbc-url>
-      <user-name>username</user-name>
-      <user-password>dfdadfcbdfd9dfd9dfdddfc5dfd8dfce</user-password>
+      <jdbc-url>jdbc:mysql://localhost/testdb</jdbc-url>
+      <user-name>root</user-name>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="MySQL - @localhost" uuid="322ebd4b-933c-4f8c-9aea-b61f27a7f1aa">
